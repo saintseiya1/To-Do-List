@@ -2,18 +2,39 @@
 <html>
 <head>
 	<title>My To Do List</title>
+	<link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 	<h1>Things that need to be done</h1>
+	<h3>Today's Date:
+		<input type="date" name="todaysDate">
+	</h3>
+
 	<form>
-		<label>Item 1</label>
-		<input type="text" />
-		<label>Item 2</label>
-		<input type="text" />
-		<label>Item 3</label>
-		<input type="text" />
+		<div>
+			<label>1</label>
+			<input type="text" placeholder="item 1" />
+			<label>due date:</label>
+			<input type="date" name="date">
+		</div>
+
+		<div>
+			<label>2</label>
+			<input type="text" placeholder="item 2" />
+			<label>due date:</label>
+			<input type="date" name="date">
+		</div>
+
+		<div>
+			<label>3</label>
+			<input type="text" placeholder="item 3" />
+			<label>due date:</label>
+			<input type="date" name="date">
+		</div>
 	</form>
 
+	<script type="text/javascript" src="list.js"></script>
 
 </body>
 </html>
