@@ -21,3 +21,7 @@ function update3(e) {
 	e.preventDefault();
 	button3.innerHTML = 'REMOVE';
 }
+
+var todaysDate = new Date();
+var td = document.getElementById('today');
+td.innerHTML = todaysDate.toDateString();
