@@ -1,3 +1,25 @@
+// add button /////////////////////////////////////////
+var elList, addLink, newEl, newText;
+
+elList = document.getElementById('list');
+addLink = document.querySelector('button');
+
+function addItem(e) {
+	e.preventDefault();
+	newEl = document.createElement('li');
+	newText = document.createTextNode('New list item');
+	newEl.appendChild(newText);
+	elList.appendChild(newEl);
+}
+
+addLink.addEventListener('click', addItem, false);
+
+// today's date ////////////////////////////////////////
+var todaysDate = new Date();
+var td = document.getElementById('today');
+td.innerHTML = todaysDate.toDateString();
+
+/*------------------------------------------------
 var button1 = document.getElementById('item1');
 button1.addEventListener('click', update1);
 
@@ -21,7 +43,4 @@ function update3(e) {
 	e.preventDefault();
 	button3.innerHTML = 'REMOVE';
 }
-
-var todaysDate = new Date();
-var td = document.getElementById('today');
-td.innerHTML = todaysDate.toDateString();
+*/
