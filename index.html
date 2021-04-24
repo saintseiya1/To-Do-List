@@ -7,36 +7,17 @@
 </head>
 
 <body>
-	<img src="images/checklist.png" />
-	<h1>Things that need to be done</h1>
-	<h3>Today's Date:
+	<img src="images/checklist.png" width="100" height="100" />
+	<h2>Things that need to be done</h2>
+	<h4>Today's Date:
 		<div id="today"></div>
-	</h3>
+	</h4>
 
-	<button type="submit" id="item1" value="item1">ADD</button>
-
-		<div>
-			<label>1</label>
-			<input type="text" placeholder="item 1" />
-			<label>due date:</label>
-			<input type="date" name="date">
-		</div>
-
-		<div>
-			<label>2</label>
-			<input type="text" placeholder="item 2" />
-			<label>due date:</label>
-			<input type="date" name="date">
-		</div>
-
-		<div>
-			<label>3</label>
-			<input type="text" placeholder="item 3" />
-			<label>due date:</label>
-			<input type="date" name="date">
-		</div>
-
-		<div id='list'></div>
+	<button type="submit" id="add">ADD</button>
+	<button type="submit" id="remove">REMOVE</button>
+	<hr />
+		
+	<div id='cc'>temp output</div>
 
 	<script type="text/javascript" src="list.js"></script>
 

@@ -1,46 +1,39 @@
-// add button /////////////////////////////////////////
-var elList, addLink, newEl, newText;
-
-elList = document.getElementById('list');
-addLink = document.querySelector('button');
-
-function addItem(e) {
-	e.preventDefault();
-	newEl = document.createElement('li');
-	newText = document.createTextNode('New list item');
-	newEl.appendChild(newText);
-	elList.appendChild(newEl);
-}
-
-addLink.addEventListener('click', addItem, false);
-
 // today's date ////////////////////////////////////////
 var todaysDate = new Date();
 var td = document.getElementById('today');
 td.innerHTML = todaysDate.toDateString();
 
-/*------------------------------------------------
-var button1 = document.getElementById('item1');
-button1.addEventListener('click', update1);
+// add button /////////////////////////////////////////
+var addLink, removeLink;
 
-var button2 = document.getElementById('item2');
-button2.addEventListener('click', update2);
+var addLink = document.getElementById('add');
+var removeLink = document.getElementById('remove');
 
-var button3 = document.getElementById('item3');
-button3.addEventListener('click', update3);
+var c = document.getElementById('cc');
+addLink.addEventListener('click', temp);
+myarray = [];
+var text = '';
+var count = 1;
 
-function update1(e) {
-	e.preventDefault();
-	button1.innerHTML = 'REMOVE';
+function temp(e) {
+	e.preventDefault();	
+		text += '<div><label>' + count + ' </label>';
+		text += '&nbsp;<input type="text" placeholder="item 1" />';
+		text += '&nbsp;<label>Due Date:</label>';
+		text += '&nbsp;<input type="date" name="date">';
+		text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
+		text += '</div>';	
+		myarray.push(text);
+		c.innerHTML = myarray;
+		myarray = [];
+		count++;
 }
 
-function update2(e) {
-	e.preventDefault();
-	button2.innerHTML = 'REMOVE';
-}
+removeLink.addEventListener('click', removeItem, false);
 
-function update3(e) {
+function removeItem(e) {
 	e.preventDefault();
-	button3.innerHTML = 'REMOVE';
+	var newarray = myarray.pop();
+	c.innerHTML = newarray;
+	count--;
 }
-*/
