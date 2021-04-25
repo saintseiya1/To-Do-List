@@ -10,15 +10,15 @@ var addLink = document.getElementById('add');
 var removeLink = document.getElementById('remove');
 
 var c = document.getElementById('cc');
-addLink.addEventListener('click', temp);
+addLink.addEventListener('click', addItem);
 myarray = [];
 var text = '';
 var count = 1;
 
-function temp(e) {
+function addItem(e) {
 	e.preventDefault();	
 		text += '<div><label>' + count + ' </label>';
-		text += '&nbsp;<input type="text" placeholder="item 1" />';
+		text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 		text += '&nbsp;<label>Due Date:</label>';
 		text += '&nbsp;<input type="date" name="date">';
 		text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
