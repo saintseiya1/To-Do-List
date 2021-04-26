@@ -12,28 +12,38 @@ var removeLink = document.getElementById('remove');
 var c = document.getElementById('cc');
 addLink.addEventListener('click', addItem);
 myarray = [];
-var text = '';
-var count = 1;
+
+var count = 0;
 
 function addItem(e) {
+
 	e.preventDefault();	
-		text += '<div><label>' + count + ' </label>';
-		text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
-		text += '&nbsp;<label>Due Date:</label>';
-		text += '&nbsp;<input type="date" name="date">';
-		text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
-		text += '</div>';	
-		myarray.push(text);
-		c.innerHTML = myarray;
-		myarray = [];
-		count++;
+	if (count < 0) {
+		return;
+	}
+	count++;
+
+	var text = '';
+	text += '<div><label>' + count + ' </label>';
+	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
+	text += '&nbsp;<label>Due Date:</label>';
+	text += '&nbsp;<input type="date" name="date">';
+	text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
+	text += '</div>';	
+
+	console.table(myarray);
+	myarray.push(text);
+	c.innerHTML = myarray;
 }
 
 removeLink.addEventListener('click', removeItem, false);
 
 function removeItem(e) {
 	e.preventDefault();
-	var newarray = myarray.pop();
-	c.innerHTML = newarray;
+	if (count < 1) {return};
 	count--;
+
+	myarray.pop();
+	c.innerHTML = myarray;
+
 }
