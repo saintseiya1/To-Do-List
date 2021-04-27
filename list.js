@@ -33,7 +33,8 @@ function addItem(e) {
 
 	console.table(myarray);
 	myarray.push(text);
-	c.innerHTML = myarray;
+
+	c.innerHTML = myarray.join(' ');
 }
 
 removeLink.addEventListener('click', removeItem, false);
@@ -44,6 +45,5 @@ function removeItem(e) {
 	count--;
 
 	myarray.pop();
-	c.innerHTML = myarray;
-
+	c.innerHTML = myarray.join(' ');
 }
