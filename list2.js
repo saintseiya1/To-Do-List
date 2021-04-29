@@ -11,29 +11,39 @@ var removeLink = document.getElementById('remove');
 
 var c = document.getElementById('cc');
 addLink.addEventListener('click', addItem);
-myarray = [];
 
-var count = 0;
+elList = document.getElementById('newlist');
+
+	
 
 function addItem(e) {
-
 	e.preventDefault();	
-	if (count < 0) {
-		return;
-	}
+	
+	newDiv = document.createElement('div');
+	//newText = document.createTextNode(mytext());
+	newDiv.innerHTML = mytext();
+	//newDiv.appendChild(newText);
+	elList.appendChild(newDiv);
+}
+var count = 0;
+function mytext() {
 	count++;
-
 	var text = '';
-	text += '<div><label>' + count + ' </label>';
+	text += '<div><label>' + count + '</label>';
 	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 	text += '&nbsp;<label>Due Date:</label>';
 	text += '&nbsp;<input type="date" name="date">';
-	text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
+	text += '&nbsp; <button id="butt">REMOVE</button>';
 	text += '</div>';	
 
-	myarray.push(text);
+	return text;
+}
 
-	c.innerHTML = myarray.join(' ');
+/*
+	addToList(result);
+	//myarray.push(text);
+
+	//c.innerHTML = myarray.join(' ');
 }
 
 removeLink.addEventListener('click', removeItem, false);
@@ -46,3 +56,8 @@ function removeItem(e) {
 	myarray.pop();
 	c.innerHTML = myarray.join(' ');
 }
+*/
+
+//function addToList(myresult) {
+
+
