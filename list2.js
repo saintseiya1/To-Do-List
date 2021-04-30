@@ -24,20 +24,22 @@ function addItem(e) {
 	newDiv.innerHTML = mytext();
 	//newDiv.appendChild(newText);
 	elList.appendChild(newDiv);
+	console.table(elList[0]);
 }
+
 var count = 0;
 function mytext() {
 	count++;
 	var text = '';
-	text += '<div><label>' + count + '</label>';
+	text += '<label>' + count + '</label>';
 	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 	text += '&nbsp;<label>Due Date:</label>';
 	text += '&nbsp;<input type="date" name="date">';
-	text += '&nbsp; <button id="butt">REMOVE</button>';
-	text += '</div>';	
+	text += '&nbsp; <button id="butt">REMOVE</button>';	
 
 	return text;
 }
+
 
 /*
 	addToList(result);
