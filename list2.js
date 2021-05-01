@@ -12,9 +12,7 @@ var removeLink = document.getElementById('remove');
 var c = document.getElementById('cc');
 addLink.addEventListener('click', addItem);
 
-elList = document.getElementById('newlist');
-
-	
+elList = document.getElementById('newlist');	
 
 function addItem(e) {
 	e.preventDefault();	
@@ -24,7 +22,7 @@ function addItem(e) {
 	newDiv.innerHTML = mytext();
 	//newDiv.appendChild(newText);
 	elList.appendChild(newDiv);
-	console.table(elList[0]);
+	console.table(elList);
 }
 
 var count = 0;
@@ -40,26 +38,23 @@ function mytext() {
 	return text;
 }
 
-
-/*
-	addToList(result);
-	//myarray.push(text);
-
-	//c.innerHTML = myarray.join(' ');
-}
-
 removeLink.addEventListener('click', removeItem, false);
 
 function removeItem(e) {
 	e.preventDefault();
-	if (count < 1) {return};
-	count--;
 
-	myarray.pop();
-	c.innerHTML = myarray.join(' ');
+
+	var itemtoberemoved = document.getElementsByTagName('div')[count];
+	console.log(itemtoberemoved);
+}
+/*
+	var removeEl = document.getElementsByTagName('li')[3];
+
+	var containerEl = removeEl.parentdNode;
+
+	containerEl.removeChild(removeEl);
 }
 */
 
-//function addToList(myresult) {
 
 
