@@ -42,19 +42,10 @@ removeLink.addEventListener('click', removeItem, false);
 
 function removeItem(e) {
 	e.preventDefault();
-
-
-	var itemtoberemoved = document.getElementsByTagName('div')[count];
-	console.log(itemtoberemoved);
-}
-/*
-	var removeEl = document.getElementsByTagName('li')[3];
-
-	var containerEl = removeEl.parentdNode;
-
+	if (count < 1) return;
+	remcount = count - 1;
+	var removeEl = document.getElementsByTagName('div')[remcount];
+	var containerEl = removeEl.parentNode;
 	containerEl.removeChild(removeEl);
+	count--;
 }
-*/
-
-
-
