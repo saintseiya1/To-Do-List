@@ -1,48 +1,44 @@
-// today's date ////////////////////////////////////////
+// today's date 
 var todaysDate = new Date();
 var td = document.getElementById('today');
 td.innerHTML = todaysDate.toDateString();
 
-// add button /////////////////////////////////////////
-var addLink, removeLink;
-
+// create variables
 var addLink = document.getElementById('add');
-var removeLink = document.getElementById('remove');
-
-var c = document.getElementById('cc');
 addLink.addEventListener('click', addItem);
-myarray = [];
-
+elList = document.getElementById('list');	
 var count = 0;
 
+// add functionality
 function addItem(e) {
-
 	e.preventDefault();	
-	if (count < 0) {
-		return;
-	}
-	count++;
+	newDIV = document.createElement('div');
+	newDIV.innerHTML = createDIV();
+	elList.appendChild(newDIV);
+	createListener();
+}
 
+function createDIV(){
+	count++;
 	var text = '';
-	text += '<div><label>' + count + ' </label>';
+	text += '<label>' + count + '</label>';
 	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 	text += '&nbsp;<label>Due Date:</label>';
 	text += '&nbsp;<input type="date" name="date">';
-	text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';
-	text += '</div>';	
-
-	myarray.push(text);
-
-	c.innerHTML = myarray.join(' ');
+	text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';	
+	return text;
 }
 
-removeLink.addEventListener('click', removeItem, false);
+//remove functionality
+function createListener() {
+	num = 'butt' + count;
+	newID = document.getElementById(num);
+	newID.addEventListener('click', remove);
+}
 
-function removeItem(e) {
+function remove(e) {
 	e.preventDefault();
-	if (count < 1) {return};
-	count--;
-
-	myarray.pop();
-	c.innerHTML = myarray.join(' ');
+	removalDIV = this.parentNode;
+	parentUL = removalDIV.parentNode;
+	parentUL.removeChild(removalDIV);
 }
