@@ -14,6 +14,10 @@ addLink.addEventListener('click', addItem);
 
 elList = document.getElementById('newlist');	
 
+
+var count = 0;
+var newcount = '';
+
 function addItem(e) {
 	e.preventDefault();	
 	
@@ -22,10 +26,15 @@ function addItem(e) {
 	newDiv.innerHTML = mytext();
 	//newDiv.appendChild(newText);
 	elList.appendChild(newDiv);
-	console.table(elList);
+	createListener();
+
+	function createListener() {
+		num = 'butt' + count;
+		newcount = document.getElementById(num);
+		alert(newcount);
+	}
 }
 
-var count = 0;
 function mytext() {
 	count++;
 	var text = '';
@@ -33,7 +42,9 @@ function mytext() {
 	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 	text += '&nbsp;<label>Due Date:</label>';
 	text += '&nbsp;<input type="date" name="date">';
-	text += '&nbsp; <button id="butt">REMOVE</button>';	
+	text += '&nbsp; <button id="butt' + count + '">REMOVE</button>';	
+
+
 
 	return text;
 }
@@ -44,8 +55,15 @@ function removeItem(e) {
 	e.preventDefault();
 	if (count < 1) return;
 	remcount = count - 1;
-	var removeEl = document.getElementsByTagName('div')[remcount];
-	var containerEl = removeEl.parentNode;
-	containerEl.removeChild(removeEl);
+	var remnumber = "butt4";
+	alert(remnumber);
+	var removal = document.getElementById(newcount);
+	console.table(removal);
+	//var removeEl = document.getElementsByTagName('div')[remcount];
+	var containerEl = removal.parentNode;
+	console.table(containerEl);
+	containerEl.removeChild(removal);
+	grandfather = containerEl.parentNode;
+	grandfather.removeChild(containerEl);
 	count--;
 }
