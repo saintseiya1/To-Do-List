@@ -40,5 +40,25 @@ function remove(e) {
 	e.preventDefault();
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
-	parentUL.removeChild(removalDIV);
+	//parentUL.removeChild(removalDIV);
+	this.className = 'change';
+
 }
+
+/*
+.chNeutral {
+  position: absolute;  
+  animation-name: chExample;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes chExample {
+	from { top: 50px;
+  		left: -200px;  	
+  	}
+  	to { top: 50px;
+  		left: 400px;
+  	}
+}
+*/

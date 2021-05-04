@@ -10,3 +10,17 @@ h2 {
 h4 {
 	color: blue;
 }
+
+.change {
+  position: absolute;  
+  animation-name: slideRight;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes slideRight {
+	from { left: 0px;  	
+  	}
+  	to { left: 400px;
+  	}
+}
