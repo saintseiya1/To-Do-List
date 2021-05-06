@@ -36,17 +36,18 @@ function createListener() {
 	newID.addEventListener('click', remove);
 }
 
-function remove() {
-	//e.preventDefault();
+function remove(e) {
+	e.preventDefault();
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
 	removalDIV.className = 'change';
-	setTimeout(removalfunct, 2000);	
+	//removalDIV.className = 'change1';
+	setTimeout(removalfunct, 1000);
+}
 
 	function removalfunct() {
 		parentUL.removeChild(removalDIV);
 	}
-}
 
 /*
 .chNeutral {
