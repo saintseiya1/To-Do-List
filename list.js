@@ -40,13 +40,13 @@ function remove(e) {
 	e.preventDefault();
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
-	removalDIV.className = 'change';
-	//removalDIV.className = 'change1';
-	setTimeout(removalfunct, 1000);
+	removalDIV.className = 'remove';
+	setTimeout(removalfunct, 600);
 }
 
 	function removalfunct() {
 		parentUL.removeChild(removalDIV);
+
 	}
 
 /*

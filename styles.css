@@ -11,30 +11,24 @@ h4 {
 	color: blue;
 }
 
-.change {
-  position: absolute;  
+button:hover {
+  background: tomato;
+  color:white;
+  cursor: pointer;
+}
+
+.remove {
+  position: fixed;  
   animation-name: slideRight;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards; 
 }
 
 @keyframes slideRight {
-	from { left: 100px;  	
+	from {  left: 150px; 
+          opacity: 1;	
   	}
-  	to { left: 700px;
+  	to { left: 500px;
+          opacity: 0.2;
   	}
-}
-
-.change1 {
-  position: absolute;  
-  animation-name: fadeout;
-  animation-duration: .5s;
-  animation-fill-mode: forwards; 
-}
-
-@keyframes fadeout {
-  from { opacity: 1;   
-    }
-    to { opacity: 0;
-    }
 }
