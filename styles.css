@@ -6,7 +6,8 @@
 
 body {
 	background-color: gainsboro;
-	text-align: left;
+  width: 50%;
+	text-align: center;
 }
 
 h2 {
@@ -48,7 +49,9 @@ h4 {
 /* background color animation */
 body {
   //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, aquamarine);
-  background: linear-gradient(-45deg, pink, lightpink, tomato, red);
+  //background: linear-gradient(-45deg, pink, lightpink, tomato, red);
+  background: linear-gradient(-45deg, yellow, khaki, gold, lightyellow);
+  background-repeat: no-repeat;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 }
