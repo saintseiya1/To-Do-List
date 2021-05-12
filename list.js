@@ -15,6 +15,7 @@ function addItem(e) {
 	newDIV = document.createElement('div');
 	newDIV.innerHTML = createDIV();
 	elList.appendChild(newDIV);
+	newDIV.className = 'adding';
 	createListener();
 }
 

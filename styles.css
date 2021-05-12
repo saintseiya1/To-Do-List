@@ -31,14 +31,27 @@ h4 {
   cursor: pointer;
 }
 
+.adding {
+  position: static;
+  animation-name: addition;
+  animation-duration: 1s;
+}
+
+@keyframes addition {
+  from { opacity: 0; 
+    }
+  to { opacity: 1;
+    }
+}
+
 .remove {
   position: absolute; 
-  animation-name: slideRight;
+  animation-name: removal;
   animation-duration: 1s;
   animation-fill-mode: forwards; 
 }
 
-@keyframes slideRight {
+@keyframes removal {
 	from { left: 50px; 
         opacity: 1;	
   	}
