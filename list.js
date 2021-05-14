@@ -41,44 +41,20 @@ function remove(e) {
 	e.preventDefault();
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
-	//
-allremoval = document.querySelectorAll('button');
-
-for (x in allremoval) {
-
-allremoval[x].className = 'stop';
-}
-//
+	buttonAll = document.querySelectorAll('button');
+	for (x of buttonAll) {
+		x.setAttribute('disabled', '');
+		x.classList.add('fadeout');
+	}
 	removalDIV.className = 'remove';
-	setTimeout(removalfunct, 600);
-
+	setTimeout(removalfunct, 2000);
 }
 
 function removalfunct() {
 	parentUL.removeChild(removalDIV);
-	allallremoval = document.querySelectorAll('button');
-for (x in allallremoval) {
-
-allallremoval[x].className = 'show';
+	buttonAll2 = document.querySelectorAll('button');
+	for (x of buttonAll2) {
+		x.removeAttribute('disabled');
+		x.classList.remove('fadeout');
+	}
 }
-	//allremoval.setAttribute('disabled', 'false');
-
-}
-
-/*
-.chNeutral {
-  position: absolute;  
-  animation-name: chExample;
-  animation-duration: 2s;
-  animation-fill-mode: forwards; 
-}
-
-@keyframes chExample {
-	from { top: 50px;
-  		left: -200px;  	
-  	}
-  	to { top: 50px;
-  		left: 400px;
-  	}
-}
-*/

@@ -84,12 +84,6 @@ body {
   }
 }
 
-.stop {
-  background-color: green;
+.fadeout {
+  opacity: 0.4;
 }
-
-.show {
-  background-color: blue;
-}
-
-
