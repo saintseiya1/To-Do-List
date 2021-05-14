@@ -41,12 +41,28 @@ function remove(e) {
 	e.preventDefault();
 	removalDIV = this.parentNode;
 	parentUL = removalDIV.parentNode;
+	//
+allremoval = document.querySelectorAll('button');
+
+for (x in allremoval) {
+
+allremoval[x].className = 'stop';
+}
+//
 	removalDIV.className = 'remove';
 	setTimeout(removalfunct, 600);
+
 }
 
 function removalfunct() {
 	parentUL.removeChild(removalDIV);
+	allallremoval = document.querySelectorAll('button');
+for (x in allallremoval) {
+
+allallremoval[x].className = 'show';
+}
+	//allremoval.setAttribute('disabled', 'false');
+
 }
 
 /*

@@ -84,3 +84,12 @@ body {
   }
 }
 
+.stop {
+  background-color: green;
+}
+
+.show {
+  background-color: blue;
+}
+
+
