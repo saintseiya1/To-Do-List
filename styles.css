@@ -19,20 +19,36 @@ h4 {
 	color: blue;
 }
 
-button:hover {
-  font-size: 100%;
+hr {
+  margin: 3px;
 }
 
-.addbutt {
-  background: lightgreen;
-  color:white;
+div, button, input {
+  padding: 1px;
+}
+
+button {
+  padding-bottom: 4px;
   cursor: pointer;
+}
+.addbutt {
+  background: white;
+  color: lightgreen;
 }
 
 .rembutt {
+  background: white;
+  color: tomato;
+}
+
+.addbutt:hover {
+  background: lightgreen;
+  color:white;
+}
+
+.rembutt:hover {
   background: tomato;
   color:white;
-  cursor: pointer;
 }
 
 .adding {
