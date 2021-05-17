@@ -27,6 +27,10 @@ div, button, input {
   padding: 1px;
 }
 
+div {
+  border: 2px solid white;
+}
+
 button {
   padding-bottom: 4px;
   cursor: pointer;
