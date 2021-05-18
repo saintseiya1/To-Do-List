@@ -26,7 +26,7 @@ function createDIV(){
 	text += '&nbsp;<input type="text" placeholder="item ' + count + '" />';
 	text += '&nbsp;<label>Due Date:</label>';
 	text += '&nbsp;<input type="date" name="date">';
-	text += '&nbsp; <button class="rembutt" id="butt' + count + '">REMOVE</button>';	
+	text += '&nbsp; <button class="rembutt" id="butt' + count + '">REMOVE</button>';
 	return text;
 }
 
