@@ -8,7 +8,7 @@ body {
 	background-color: gainsboro;
   width: 50%;
 	text-align: center;
-  min-width: 450px;
+  width: 450px;
 }
 
 h2 {
@@ -29,6 +29,8 @@ div, button, input {
 
 div {
   border: 2px solid white;
+  border-radius: 10px;
+  margin: 5px 0;
 }
 
 button {
