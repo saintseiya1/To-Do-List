@@ -3,6 +3,14 @@ var todaysDate = new Date();
 var td = document.getElementById('today');
 td.innerHTML = todaysDate.toDateString();
 
+o = document.getElementById('on');
+o.addEventListener('click', turnOn);
+
+function turnOn() {
+	c = document.getElementById('container');
+	c.classList.remove('hide');
+}
+
 // create variables
 var addLink = document.getElementById('add');
 addLink.addEventListener('click', addItem);

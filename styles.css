@@ -109,3 +109,7 @@ body {
 .fadeout {
   opacity: 0.4;
 }
+
+.hide {
+  display: none;
+}
