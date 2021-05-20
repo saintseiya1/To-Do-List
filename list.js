@@ -3,12 +3,22 @@ var todaysDate = new Date();
 var td = document.getElementById('today');
 td.innerHTML = todaysDate.toDateString();
 
+// on button
 o = document.getElementById('on');
 o.addEventListener('click', turnOn);
 
 function turnOn() {
 	c = document.getElementById('container');
 	c.classList.remove('hide');
+}
+
+// off button
+of = document.getElementById('off');
+of.addEventListener('click', turnOff);
+
+function turnOff() {
+	c = document.getElementById('container');
+	c.classList.add('hide');
 }
 
 // create variables
